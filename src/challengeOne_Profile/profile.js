@@ -31,7 +31,11 @@ const Profile = () => {
 		.catch(err => {console.log(err)})
 	}, [])
 
+	if(!person) {
+		return <p>loading...</p>
+	}
 	return(
+
 	<div className="mainDiv"> 
 		<div className="headerDiv" >
 			<img className="profileImage" src={person.avatar_url}/>
@@ -68,7 +72,10 @@ const Profile = () => {
 				<img  src={msgsvg} alt="message icon"/>
 			</div>
 		</div>
-	 </div>);
+	 </div>
+
+
+	 );
 };
 
 export default Profile;
