@@ -21,6 +21,27 @@
   justify-content: space-evenly;
 }
 
+.newFriends {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #567df4;
+  opacity: 0.6;
+}
+
+.friendsNum {
+  margin-bottom: 0px;
+  margin-top: 2px;
+  font-size: 22px;
+  color: #567df4;
+}
+
 .friendsMiniDiv {
   text-align: center;
 }
@@ -44,8 +65,11 @@ h3 {
   margin-bottom: 0px;
   color: #222222;
   display: flex;
-
   justify-content: center;
+}
+
+.locationsvg {
+  margin-right: 3px;
 }
 .profileImage {
   border-radius: 50%;

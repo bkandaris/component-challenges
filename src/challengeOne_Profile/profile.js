@@ -3,6 +3,7 @@ import axios from 'axios';
 import pinsvg from './assets/pinIcon.svg'
 import msgsvg from './assets/messageIcon.svg';
 import terminalIcon from './assets/terminalIcon.svg'
+import { motion } from 'framer-motion';
 
 const Profile = () => {
 
@@ -36,11 +37,16 @@ const Profile = () => {
 	}
 	return(
 
-	<div className="mainDiv"> 
+	<motion.div     animate={{
+		scale: [1, 2, 2, 1, 1],
+		rotate: [0, 0, 270, 270, 0],
+		borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+	  }}  className="mainDiv"> 
 		<div className="headerDiv" >
 			<img className="profileImage" src={person.avatar_url}/>
+			
 			<p className="name">{person.name}</p>
-			<p className="location"><img src={pinsvg} alt={"pin location"}  />{person.location}</p>
+			<p className="location"><img className="locationsvg" src={pinsvg} alt={"pin location"}  />{person.location}</p>
 		</div>
 		<div className="friendsDiv" >
 			<div className="friendsMiniDiv" >
@@ -68,11 +74,19 @@ const Profile = () => {
 				Code Together
 			</button>
 			}
+
+			{ buttonOn ?
 			<div className="msgWrapper">
 				<img  src={msgsvg} alt="message icon"/>
 			</div>
+			: 
+			<div className="newFriends">
+			<h4>Friends</h4>
+			<p className="friendsNum">{friends}</p>
+			</div>
+				}
 		</div>
-	 </div>
+	 </motion.div>
 
 
 	 );
