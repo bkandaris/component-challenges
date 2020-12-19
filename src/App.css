@@ -47,6 +47,7 @@ h4 {
 
 h3 {
   opacity: 0.6;
+  margin-bottom: -10px;
 }
 
 .friendsNumbers {
@@ -105,6 +106,8 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .upButton {
@@ -116,6 +119,8 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .upButton:hover {

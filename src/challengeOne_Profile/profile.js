@@ -6,8 +6,6 @@ import terminalIcon from './assets/terminalIcon.svg'
 import { motion } from 'framer-motion';
 
 const Profile = () => {
-
-
 	const [person, setPerson ] = useState(null)
 	const [friends, setFriends ] = useState(null)
 	const [buttonOn, setButtonOn] = useState(true)
@@ -31,19 +29,17 @@ const Profile = () => {
 		})
 		.catch(err => {console.log(err)})
 	}, [])
-
 	if(!person) {
 		return <p>loading...</p>
 	}
+	
 	return(
-
 	<motion.div     animate={{
 		scale: [1, 2, 2, 1, 1],
 		rotate: [0, 0, 270, 270, 0],
 	  }}  className="mainDiv"> 
 		<div className="headerDiv" >
 			<img className="profileImage" src={person.avatar_url}/>
-			
 			<p className="name">{person.name}</p>
 			<p className="location"><img className="locationsvg" src={pinsvg} alt={"pin location"}  />{person.location}</p>
 		</div>
@@ -86,8 +82,6 @@ const Profile = () => {
 				}
 		</div>
 	 </motion.div>
-
-
 	 );
 };
 
